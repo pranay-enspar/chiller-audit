@@ -1,0 +1,98 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Brand */
+  --primary:      #1B6B52;
+  --primary-dk:   #14543F;
+  --primary-lt:   #E8F5EF;
+  --primary-bd:   #A7D4C1;
+
+  /* Neutrals */
+  --bg:           #F7F6F2;
+  --card:         #FFFFFF;
+  --border:       #E2DFD8;
+  --border-dk:    #C9C5BC;
+
+  /* Text */
+  --text:         #1C1917;
+  --text2:        #78716C;
+  --text3:        #A8A29E;
+
+  /* Status — Good */
+  --green:        #16A34A;
+  --green-lt:     #DCFCE7;
+  --green-bd:     #86EFAC;
+  --green-dk:     #15803D;
+
+  /* Status — Warn */
+  --amber:        #D97706;
+  --amber-lt:     #FEF3C7;
+  --amber-bd:     #FCD34D;
+  --amber-dk:     #B45309;
+
+  /* Status — Bad */
+  --red:          #DC2626;
+  --red-lt:       #FEE2E2;
+  --red-bd:       #FCA5A5;
+  --red-dk:       #B91C1C;
+
+  /* Status — Info */
+  --blue:         #2563EB;
+  --blue-lt:      #DBEAFE;
+  --blue-bd:      #93C5FD;
+
+  /* Radius & shadow */
+  --radius:       12px;
+  --radius-sm:    8px;
+  --shadow:       0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.12);
+
+  /* Typography */
+  --font:         -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono:         'SF Mono', 'Fira Mono', 'JetBrains Mono', 'Cascadia Mono', monospace;
+
+  /* Layout */
+  --nav-h:        64px;
+  --header-h:     56px;
+  --safe-b:       env(safe-area-inset-bottom, 0px);
+  --safe-t:       env(safe-area-inset-top, 0px);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-dk); border-radius: 2px; }
+
+/* Input resets */
+input, select, textarea {
+  font-family: var(--font);
+  color: var(--text);
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type='number'] { -moz-appearance: textfield; }
+
+/* Tap highlight */
+* { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+
+/* Utility classes */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
